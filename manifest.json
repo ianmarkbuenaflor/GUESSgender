@@ -1,0 +1,16 @@
+{
+    "name": "GENDER guess!",
+    "short_name": "Guess",
+    "icons": [
+      {
+        "src": "icon1.png",
+        "sizes": "225x225",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#FFF6E9",
+    "theme_color": "#FFF6E9",
+    "id": "/index.html"
+  }

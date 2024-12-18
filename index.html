@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <title>Genderize API with User Input</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Genderize API with User Input</h1>
+    <form id="genderForm">
+      <label for="nameInput">Enter a name:</label>
+      <input type="text" id="nameInput" placeholder="Type a name" required>
+      <button type="submit" id="submit">Fetch Gender</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="platform1.js"></script>
+  <script src="sw.js"></script>
+</body>
+</html>
