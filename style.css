@@ -9,7 +9,9 @@ body {
     align-items: center;
     height: 100vh;
     box-sizing: border-box;
-
+    background-image: url('https://wallpaper.dog/large/966308.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
@@ -17,7 +19,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8); /* Adjust opacity here */
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -25,6 +27,7 @@ body {
     width: 100%;
     text-align: center;
 }
+
 
 h1 {
     font-size: 2.5rem;
