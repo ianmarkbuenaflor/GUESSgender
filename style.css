@@ -9,7 +9,7 @@ body {
     align-items: center;
     height: 100vh;
     box-sizing: border-box;
-    background-image: url('https://wallpaper.dog/large/966308.jpg');
+    background-image: url('background.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
