@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Add event listener to the form submit event
     var form = document.getElementById('genderForm');
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission behavior
-        fetchGender(); // Call the fetchGender function
-        // document.getElementById('nameInput').value = "";
+        event.preventDefault();
+        fetchGender(); 
         document.getElementById("submit").style.backgroundColor = `red`;
         document.getElementById("submit").textContent = `Refresh`;
         document.addEventListener("click", () => {
@@ -14,32 +12,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fetchGender() {
-    var nameInput = document.getElementById('nameInput'); // Get the input element
-    var resultDiv = document.getElementById('result'); // Get the result div
-    resultDiv.innerHTML = ''; // Clear any previous results
+    var nameInput = document.getElementById('nameInput'); 
+    var resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
 
-    var name = nameInput.value; // Get the value from the input field
+    var name = nameInput.value; 
     if (!name) {
-        resultDiv.textContent = 'Please enter a name.'; // If no name is provided, show a message
-        return; // Exit the function
+        resultDiv.textContent = 'Please enter a name.'; 
+        return;
     }
 
-    var url = 'https://api.genderize.io/?name=' + name; // Construct the API URL
+    var url = 'https://api.genderize.io/?name=' + name; 
 
     fetch(url)
         .then(function(response) {
             if (!response.ok) {
-                throw new Error('HTTP error! Status: ' + response.status); // Throw an error if the response is not OK
+                throw new Error('HTTP error! Status: ' + response.status); 
             }
-            return response.json(); // Convert the response data to JSON
+            return response.json(); 
         })
         .then(function(data) {
-            var result = document.createElement('p'); // Create a new paragraph element
-            result.textContent = 'Name: ' + data.name + ', Gender: ' + data.gender + ', Probability: ' + data.probability; // Set the text content of the paragraph
-            resultDiv.appendChild(result); // Add the paragraph to the result div
+            var result = document.createElement('p'); 
+            result.textContent = 'Name: ' + data.name + ', Gender: ' + data.gender + ', Probability: ' + data.probability; 
+            resultDiv.appendChild(result); 
         })
         .catch(function(error) {
-            console.error('Error fetching data:', error); // Log any errors to the console
-            resultDiv.textContent = 'An error occurred: ' + error.message; // Show an error message in the result div
+            console.error('Error fetching data:', error); 
+            resultDiv.textContent = 'An error occurred: ' + error.message; 
         });
 }
